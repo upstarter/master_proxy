@@ -7,7 +7,7 @@ defmodule MasterProxy.Mixfile do
   @version "0.1.0"
 
   @deps [
-    {:mix_templates, ">0.0.0", app: false},
+    {:mix_templates, ">0.0.0", app: false, git: "https://github.com/ericsteen/mix_templates"},
     {:ex_doc, ">0.0.0", only: [:dev, :test]}
   ]
 
@@ -15,7 +15,11 @@ defmodule MasterProxy.Mixfile do
   @github "https://github.com/ericsteen/#{@name}"
 
   @description """
-  What your template does (less than 300 characters)
+  Generate a mix umbrella project that proxies web requests on a single port to multiple apps underneath the umbrella.
+
+  The aim of this project is to create a code generation schematic for specialized high-performance umbrella clusters.
+
+  Create a Pull Request or join the discussion on the [slack channel](https://join.slack.com/t/masterproxy/shared_invite/enQtNTQxNDYxMjM1MTI3LTM1Y2U3OTZkZTI5ZTlhZThiMjJhYTVjYTdiM2QzMTIzZjYyZjY5MDQ0NzU3MWI0OTVjZDc0NjMwNmE4NDcxNGQ). For context see the [acme_bank](https://github.com/wojtekmach/acme_bank) example.
   """
 
   # ------------------------------------------------------------

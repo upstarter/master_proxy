@@ -1,5 +1,0 @@
-use Mix.Config
-
-config :master_proxy, port: <%= @port %>
-
-import_config "#{Mix.env()}.exs"

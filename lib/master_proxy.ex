@@ -8,7 +8,10 @@ defmodule MasterProxy do
     based_on: :umbrella,
     options: [
       port: [takes: "port", required: true],
-      app1: [takes: "app1", required: true],
-      app2: [takes: "app2", required: true]
+      app1: [takes: "app1"],
+      app2: [takes: "app2"],
+      app3: [takes: "app3"],
+      app4: [takes: "app4"],
+      app5: [takes: "app5"]
     ]
 end

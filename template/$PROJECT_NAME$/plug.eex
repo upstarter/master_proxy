@@ -5,9 +5,9 @@ defmodule MasterProxy.Plug do
 
   def call(conn, _opts) do
     if conn.request_path =~ ~r{^/#{<%= Macro.underscore(@app2) %>}} do
-      <%= String.capitalize(@app2) %>.Endpoint.call(conn, [])
+      <%= Macro.camelize(@app2) %>.Endpoint.call(conn, [])
     else
-      <%= String.capitalize(@app1) %>.Endpoint.call(conn, [])
+      <%= Macro.camelize(@app1) %>.Endpoint.call(conn, [])
     end
   end
 end

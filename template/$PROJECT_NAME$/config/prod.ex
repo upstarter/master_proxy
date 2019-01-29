@@ -1,4 +1,4 @@
 use Mix.Config
 
-config :master_proxy,
+config :<%= @project_name %>,
   port: {:system, "PORT"}

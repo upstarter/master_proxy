@@ -1,9 +1,9 @@
 defmodule MasterProxy.Application do
 
-  alias <%= String.capitalize(@app1) %>.Endpoint, as: <%= String.capitalize(@app1) %>Endpoint
-  alias <%= String.capitalize(@app1) %>.UserSocket, as: <%= String.capitalize(@app1) %>UserSocket
-  alias <%= String.capitalize(@app2) %>.Endpoint,   as: <%= String.capitalize(@app2) %>Endpoint
-  alias <%= String.capitalize(@app2) %>.UserSocket, as: <%= String.capitalize(@app2) %>UserSocket
+  alias <%= Macro.camelize(@app1) %>.Endpoint, as: <%= Macro.camelize(@app1) %>Endpoint
+  alias <%= Macro.camelize(@app1) %>.UserSocket, as: <%= Macro.camelize(@app1) %>UserSocket
+  alias <%= Macro.camelize(@app2) %>.Endpoint,   as: <%= Macro.camelize(@app2) %>Endpoint
+  alias <%= Macro.camelize(@app2) %>.UserSocket, as: <%= Macro.camelize(@app2) %>UserSocket
 
   alias Phoenix.LiveReloader.Socket,  as: LiveReloadSocket
   alias Plug.Cowboy
@@ -37,10 +37,10 @@ defmodule MasterProxy.Application do
         options: [
           port: to_port(@port),
           dispatch: [{:_, [
-            websocket_handler("/#{<%= Macro.underscore(@app1) %>}/live_reload/socket/websocket", <%= String.capitalize(@app1) %>Endpoint, {LiveReloadSocket, :websocket}),
-            websocket_handler("/#{<%= Macro.underscore(@app2) %>}/live_reload/socket/websocket", <%= String.capitalize(@app2) %>Endpoint, {LiveReloadSocket, :websocket}),
-            websocket_handler("/#{<%= Macro.underscore(@app1) %>}/socket/websocket", <%= String.capitalize(@app1) %>Endpoint, {<%= String.capitalize(@app1) %>UserSocket, websocket: true}),
-            websocket_handler("/#{<%= Macro.underscore(@app2) %>}/socket/websocket", <%= String.capitalize(@app2) %>Endpoint, {<%= String.capitalize(@app2) %>UserSocket, websocket: true}),
+            websocket_handler("/#{<%= Macro.underscore(@app1) %>}/live_reload/socket/websocket", <%= Macro.camelize(@app1) %>Endpoint, {LiveReloadSocket, :websocket}),
+            websocket_handler("/#{<%= Macro.underscore(@app2) %>}/live_reload/socket/websocket", <%= Macro.camelize(@app2) %>Endpoint, {LiveReloadSocket, :websocket}),
+            websocket_handler("/#{<%= Macro.underscore(@app1) %>}/socket/websocket", <%= Macro.camelize(@app1) %>Endpoint, {<%= Macro.camelize(@app1) %>UserSocket, websocket: true}),
+            websocket_handler("/#{<%= Macro.underscore(@app2) %>}/socket/websocket", <%= Macro.camelize(@app2) %>Endpoint, {<%= Macro.camelize(@app2) %>UserSocket, websocket: true}),
             {:_, Cowboy.Handler, {MasterProxy.Plug, []}}
           ]}]
         ]
