@@ -1,0 +1,69 @@
+defmodule MasterProxy.Application do
+
+  alias <%= String.capitalize(@app1) %>.Endpoint, as: <%= String.capitalize(@app1) %>Endpoint
+  alias <%= String.capitalize(@app1) %>.UserSocket, as: <%= String.capitalize(@app1) %>UserSocket
+  alias <%= String.capitalize(@app2) %>.Endpoint,   as: <%= String.capitalize(@app2) %>Endpoint
+  alias <%= String.capitalize(@app2) %>.UserSocket, as: <%= String.capitalize(@app2) %>UserSocket
+
+  alias Phoenix.LiveReloader.Socket,  as: LiveReloadSocket
+  alias Plug.Cowboy
+
+  use Application
+
+  require Logger
+
+  @port Application.get_env(:master_proxy, :port)
+
+  def start(_type, _args) do
+    {:ok, pid} = in_phoenix?() |> children |> run_application()
+    Logger.info("successfully started master_proxy on port #{to_port(@port)}")
+    {:ok, pid}
+  end
+
+  defp run_application(children) do
+    import Supervisor.Spec, warn: false
+    Supervisor.start_link(
+      children,
+      [strategy: :one_for_one, name: MasterProxy.Supervisor]
+    )
+  end
+
+  defp children(_start_cowboy = false), do: []
+  defp children(_start_cowboy = true) do
+    [
+      Cowboy.child_spec(
+        plug: nil, # since we're using manual dispatch, plug is ignored
+        scheme: :http,
+        options: [
+          port: to_port(@port),
+          dispatch: [{:_, [
+            websocket_handler("/#{<%= Macro.underscore(@app1) %>}/live_reload/socket/websocket", <%= String.capitalize(@app1) %>Endpoint, {LiveReloadSocket, :websocket}),
+            websocket_handler("/#{<%= Macro.underscore(@app2) %>}/live_reload/socket/websocket", <%= String.capitalize(@app2) %>Endpoint, {LiveReloadSocket, :websocket}),
+            websocket_handler("/#{<%= Macro.underscore(@app1) %>}/socket/websocket", <%= String.capitalize(@app1) %>Endpoint, {<%= String.capitalize(@app1) %>UserSocket, websocket: true}),
+            websocket_handler("/#{<%= Macro.underscore(@app2) %>}/socket/websocket", <%= String.capitalize(@app2) %>Endpoint, {<%= String.capitalize(@app2) %>UserSocket, websocket: true}),
+            {:_, Cowboy.Handler, {MasterProxy.Plug, []}}
+          ]}]
+        ]
+      )
+    ]
+  end
+
+  defp websocket_handler(path, endpoint, options) do
+    {path, Phoenix.Endpoint.Cowboy2Handler, {endpoint, options}}
+  end
+
+  # we only want the proxy to start when phoenix is started as well
+  # (not in iex or tests)
+  defp in_phoenix? do
+    Application.get_env(:phoenix, :serve_endpoints)
+  end
+
+  defp to_port(nil) do
+    Logger.error "Server can't start because :port in config is nil, please use a valid port number"
+    exit(:shutdown)
+  end
+  defp to_port(binary)  when is_binary(binary),   do: String.to_integer(binary)
+  defp to_port(integer) when is_integer(integer), do: integer
+  defp to_port({:system, env_var}), do: to_port(System.get_env(env_var))
+
+end
