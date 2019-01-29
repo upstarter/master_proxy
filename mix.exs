@@ -1,6 +1,8 @@
 defmodule MasterProxy.Mixfile do
   use Mix.Project
 
+  # ------------------------------------------------------------
+
   @name :master_proxy
   @version "0.1.0"
 
@@ -22,6 +24,7 @@ defmodule MasterProxy.Mixfile do
     in_production = Mix.env() == :prod
 
     [
+      apps_path: "apps",
       app: @name,
       version: @version,
       deps: @deps,
@@ -42,7 +45,6 @@ defmodule MasterProxy.Mixfile do
       links: %{
         "GitHub" => @github
       }
-      #      extra:       %{ "type" => "a_template_for_mix_gen" },
     ]
   end
 end
