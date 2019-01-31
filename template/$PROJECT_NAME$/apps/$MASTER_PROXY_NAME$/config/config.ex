@@ -1,6 +1,6 @@
 use Mix.Config
 
-config :<%= Macro.underscore(@app1) %>, port: <%= @port %>
+config :<%= Macro.underscore(@app1_name) %>, port: <%= @port %>
 
 import_config "#{Mix.env()}.exs"
 

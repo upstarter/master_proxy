@@ -17,8 +17,8 @@ Create a Pull Request or join the discussion on the [slack channel](https://join
 ## Seeking Contributors
 
 ## Roadmap
-- [ ] Enable config files for generation schematics vs. cli
-  - may require a fork of [pragdave/mix_templates](https://github.com/pragdave/mix_templates)
+- [x] Enable config files for generation schematics
+  - depends on [this fork](https://github.com/ericsteen/mix_templates) of pragdave/mix_templates
 
 
 - [ ] Configurable OAuth2 server generation
@@ -46,7 +46,6 @@ Create a Pull Request or join the discussion on the [slack channel](https://join
 
 - [geonnave/gen_mcast](https://github.com/geonnave/gen_mcast)
 
-
 ## Features
 
 ### _Coming Soon!_
@@ -62,6 +61,23 @@ Create a Pull Request or join the discussion on the [slack channel](https://join
 ## Third Party Strategies
 
 ### _Coming Soon!_
+
+## Testing
+```bash
+run() {
+  cd $PROJECTS/mix_templates;
+  mix do archive.build, archive.install;
+  cd $PROJECTS
+  mix gen ./master_proxy Data$1Gateway \
+    --port 4000 \
+    --master-proxy-name APIGateway \
+    --app1 auth \
+    --app2 brains \
+    --app3 elastic_stack \
+    --app4 sparkler \
+    --app5 web_crawler
+}
+```
 
 ## License
 

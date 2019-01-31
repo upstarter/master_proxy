@@ -1,24 +1,25 @@
-defmodule <%= Macro.camelize(@app1) %>.Mixfile do
+defmodule <%= Macro.camelize(@master_proxy_name) %>.Mixfile do
   use Mix.Project
-  @name    :<%= Macro.underscore(@app1) %>
+  @name    :<%= Macro.underscore(@master_proxy_name) %>
   @version "0.1.0"
 
   def project do
-    [
-      apps_path: "apps",
-      start_permanent: Mix.env() == :prod,
-      deps: deps(),
-      # Docs
-      name: "<%= @app1 %>",
-      source_url: "https://github.com/USER/PROJECT",
-      homepage_url: "http://YOUR_PROJECT_HOMEPAGE",
-      docs: [
-        main: "Platform",
-        extras: ["README.md"]
-      ]
-    ]
+    [app: :<%= Macro.underscore(@master_proxy_name) %>,
+     version: "0.1.0",
+     build_path: "../../_build",
+     config_path: "../../config/config.exs",
+     deps_path: "../../deps",
+     lockfile: "../../mix.lock",
+     elixir: "~> 1.4.2",
+     build_embedded: Mix.env == :prod,
+     start_permanent: Mix.env == :prod,
+     deps: deps()]
   end
 
+  def application do
+    [applications: [:logger, :cowboy, :plug, :bank_web, :backoffice],
+     mod: {MasterProxy.Application, []}]
+  end
 
   # Dependencies can be Hex packages:
   #
