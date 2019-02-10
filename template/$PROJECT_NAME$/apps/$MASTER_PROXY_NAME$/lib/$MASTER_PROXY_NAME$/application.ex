@@ -2,15 +2,9 @@ defmodule <%= @project_name_camel_case %>.<%= Macro.camelize(@master_proxy_name)
 
   alias <%= Macro.camelize(@app1_name) %>.Endpoint, as: <%= Macro.camelize(@app1_name) %>Endpoint
   alias <%= Macro.camelize(@app2_name) %>.Endpoint,   as: <%= Macro.camelize(@app2_name) %>Endpoint
-  alias <%= Macro.camelize(@app3_name) %>.Endpoint, as: <%= Macro.camelize(@app3_name) %>Endpoint
-  alias <%= Macro.camelize(@app4_name) %>.Endpoint,   as: <%= Macro.camelize(@app4_name) %>Endpoint
-  alias <%= Macro.camelize(@app5_name) %>.Endpoint,   as: <%= Macro.camelize(@app5_name) %>Endpoint
 
   alias <%= Macro.camelize(@app1_name) %>.UserSocket, as: <%= Macro.camelize(@app1_name) %>UserSocket
   alias <%= Macro.camelize(@app2_name) %>.UserSocket, as: <%= Macro.camelize(@app2_name) %>UserSocket
-  alias <%= Macro.camelize(@app3_name) %>.UserSocket, as: <%= Macro.camelize(@app3_name) %>UserSocket
-  alias <%= Macro.camelize(@app4_name) %>.UserSocket, as: <%= Macro.camelize(@app4_name) %>UserSocket
-  alias <%= Macro.camelize(@app5_name) %>.UserSocket, as: <%= Macro.camelize(@app5_name) %>UserSocket
 
   alias Phoenix.LiveReloader.Socket,  as: LiveReloadSocket
   alias Plug.Cowboy
@@ -46,14 +40,8 @@ defmodule <%= @project_name_camel_case %>.<%= Macro.camelize(@master_proxy_name)
           dispatch: [{:_, [
             websocket_handler("/<%= Macro.underscore(@app1_name) %>/live_reload/socket/websocket", <%= Macro.camelize(@app1_name) %>Endpoint, {LiveReloadSocket, :websocket}),
             websocket_handler("/<%= Macro.underscore(@app2_name) %>/live_reload/socket/websocket", <%= Macro.camelize(@app2_name) %>Endpoint, {LiveReloadSocket, :websocket}),
-            websocket_handler("/<%= Macro.underscore(@app3_name) %>/live_reload/socket/websocket", <%= Macro.camelize(@app3_name) %>Endpoint, {LiveReloadSocket, :websocket}),
-            websocket_handler("/<%= Macro.underscore(@app4_name) %>/live_reload/socket/websocket", <%= Macro.camelize(@app4_name) %>Endpoint, {LiveReloadSocket, :websocket}),
-            websocket_handler("/<%= Macro.underscore(@app5_name) %>/live_reload/socket/websocket", <%= Macro.camelize(@app5_name) %>Endpoint, {LiveReloadSocket, :websocket}),
             websocket_handler("/<%= Macro.underscore(@app1_name) %>/socket/websocket", <%= Macro.camelize(@app1_name) %>Endpoint, {<%= Macro.camelize(@app1_name) %>UserSocket, websocket: true}),
             websocket_handler("/<%= Macro.underscore(@app2_name) %>/socket/websocket", <%= Macro.camelize(@app2_name) %>Endpoint, {<%= Macro.camelize(@app2_name) %>UserSocket, websocket: true}),
-            websocket_handler("/<%= Macro.underscore(@app3_name) %>/socket/websocket", <%= Macro.camelize(@app2_name) %>Endpoint, {<%= Macro.camelize(@app3_name) %>UserSocket, websocket: true}),
-            websocket_handler("/<%= Macro.underscore(@app4_name) %>/socket/websocket", <%= Macro.camelize(@app2_name) %>Endpoint, {<%= Macro.camelize(@app4_name) %>UserSocket, websocket: true}),
-            websocket_handler("/<%= Macro.underscore(@app5_name) %>/socket/websocket", <%= Macro.camelize(@app2_name) %>Endpoint, {<%= Macro.camelize(@app5_name) %>UserSocket, websocket: true}),
             {:_, Cowboy.Handler, {<%= @project_name_camel_case %>.Plug, []}}
           ]}]
         ]
