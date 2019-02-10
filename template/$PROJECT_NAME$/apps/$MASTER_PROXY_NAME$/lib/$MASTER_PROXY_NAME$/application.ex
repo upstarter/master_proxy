@@ -2,7 +2,6 @@ defmodule <%= @project_name_camel_case %>.<%= Macro.camelize(@master_proxy_name)
 
   alias <%= Macro.camelize(@app1_name) %>.Endpoint, as: <%= Macro.camelize(@app1_name) %>Endpoint
   alias <%= Macro.camelize(@app2_name) %>.Endpoint,   as: <%= Macro.camelize(@app2_name) %>Endpoint
-
   alias <%= Macro.camelize(@app1_name) %>.UserSocket, as: <%= Macro.camelize(@app1_name) %>UserSocket
   alias <%= Macro.camelize(@app2_name) %>.UserSocket, as: <%= Macro.camelize(@app2_name) %>UserSocket
 
@@ -25,7 +24,7 @@ defmodule <%= @project_name_camel_case %>.<%= Macro.camelize(@master_proxy_name)
     import Supervisor.Spec, warn: false
     Supervisor.start_link(
       children,
-      [strategy: :one_for_one, name: MasterProxy.Supervisor]
+      [strategy: :one_for_one, name: <%= @master_proxy_name %>.Supervisor]
     )
   end
 
@@ -42,7 +41,7 @@ defmodule <%= @project_name_camel_case %>.<%= Macro.camelize(@master_proxy_name)
             websocket_handler("/<%= Macro.underscore(@app2_name) %>/live_reload/socket/websocket", <%= Macro.camelize(@app2_name) %>Endpoint, {LiveReloadSocket, :websocket}),
             websocket_handler("/<%= Macro.underscore(@app1_name) %>/socket/websocket", <%= Macro.camelize(@app1_name) %>Endpoint, {<%= Macro.camelize(@app1_name) %>UserSocket, websocket: true}),
             websocket_handler("/<%= Macro.underscore(@app2_name) %>/socket/websocket", <%= Macro.camelize(@app2_name) %>Endpoint, {<%= Macro.camelize(@app2_name) %>UserSocket, websocket: true}),
-            {:_, Cowboy.Handler, {<%= @project_name_camel_case %>.Plug, []}}
+            {:_, Cowboy.Handler, {<%= @master_proxy_name %>.Plug, []}}
           ]}]
         ]
       )

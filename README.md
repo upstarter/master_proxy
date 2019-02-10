@@ -16,11 +16,8 @@ Create a Pull Request or join the discussion on the [slack channel](https://join
 
 ## Seeking Contributors
 
-## Roadmap
-- [x] Enable config files for generation schematics
   - depends on [this fork](https://github.com/ericsteen/mix_templates) of pragdave/mix_templates
-
-
+## Roadmap
 - [ ] Configurable OAuth2 server generation
 
 - [ ] Enable distribution of requests via multicast, broadcast, anycast/gossip.
@@ -68,14 +65,11 @@ run() {
   cd $PROJECTS/mix_templates;
   mix do archive.build, archive.install;
   cd $PROJECTS
-  mix gen ./master_proxy Data$1Gateway \
+  mix gen ./master_proxy $1Data$2Gateway \
     --port 4000 \
     --master-proxy-name APIGateway \
     --app1 auth \
     --app2 brains \
-    --app3 elastic_stack \
-    --app4 sparkler \
-    --app5 web_crawler
 }
 ```
 

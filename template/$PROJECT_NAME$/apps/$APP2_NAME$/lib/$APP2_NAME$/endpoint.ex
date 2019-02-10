@@ -1,3 +1,4 @@
+
 defmodule <%= @app1_name %>Web.Endpoint do
   use Phoenix.Endpoint, otp_app: :<%= Macro.underscore(@app1_name) %>
 
@@ -23,7 +24,7 @@ defmodule <%= @app1_name %>Web.Endpoint do
   plug Plug.Parsers,
     parsers: [:urlencoded, :multipart, :json],
     pass: ["*/*"],
-    json_decoder: Jason
+    json_decoder: Poison
 
   plug Plug.MethodOverride
   plug Plug.Head
