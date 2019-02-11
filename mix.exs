@@ -28,7 +28,6 @@ defmodule MasterProxy.Mixfile do
     in_production = Mix.env() == :prod
 
     [
-      apps_path: "apps",
       app: @name,
       version: @version,
       deps: @deps,

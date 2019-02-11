@@ -1,6 +1,6 @@
 defmodule <%= Macro.camelize(@master_proxy_name) %>.Mixfile do
   use Mix.Project
-  @name    :<%= Macro.underscore(@master_proxy_name) %>
+  @name :<%= Macro.underscore(@master_proxy_name) %>
   @version "0.1.0"
 
   def project do
@@ -17,8 +17,8 @@ defmodule <%= Macro.camelize(@master_proxy_name) %>.Mixfile do
   end
 
   def application do
-    [applications: [:logger, :cowboy, :plug, :bank_web, :backoffice],
-     mod: {MasterProxy.Application, []}]
+    [applications: [:logger, :cowboy, :plug],
+     mod: {<%= @master_proxy_name %>.Application, []}]
   end
 
   # Dependencies can be Hex packages:
@@ -35,11 +35,12 @@ defmodule <%= Macro.camelize(@master_proxy_name) %>.Mixfile do
   # and cannot be accessed from applications inside the apps folder
   defp deps do
     [
-      {:plug, git: "git://github.com/elixir-lang/plug.git"},
+      {:plug_cowboy, "~> 2.0.0"},
+      {:phoenix, "~> 1.4.0"},
+      {:jason, "~> 1.0"},
       {:ex_doc, "~> 0.13", only: :dev},
       {:dialyxir, "~> 0.3", only: :dev},
       {:exvcr, "~> 0.8", only: :test},
-      {:jason, "~> 1.0"}
     ]
   end
 end
