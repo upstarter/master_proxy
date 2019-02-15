@@ -5,8 +5,10 @@ defmodule MasterProxy do
     name: :master_proxy,
     short_desc: "Template for an Umbrella MasterProxy",
     source_dir: "../template",
-    based_on: :umbrella,
-    options: [
+    based_on: :umbrella
+
+  def options do
+    [
       port: [takes: "port", required: true],
       master_proxy_name: [
         takes: "master-proxy-name",
@@ -15,4 +17,5 @@ defmodule MasterProxy do
       app1: [takes: "app1", to: :app1_name],
       app2: [takes: "app2", to: :app2_name]
     ]
+  end
 end
