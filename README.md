@@ -34,7 +34,7 @@ Create a Pull Request or join the discussion on the [slack channel](https://join
 
 - Other uni and multi port use cases leveraging various elixir and OTP capabilities, including:
 
-  - generating specialized high performance containerized umbrella clusters. *[libcluster](https://github.com/bitwalker/libcluster), [kazan](https://github.com/obmarg/kazan), [bonny](https://github.com/coryodaniel/bonny)*.
+  - generating specialized high performance containerized umbrella clusters. *[swarm](https://github.com/bitwalker/swarm)/[libcluster](https://github.com/bitwalker/libcluster), [kazan](https://github.com/obmarg/kazan), [bonny](https://github.com/coryodaniel/bonny)*.
 
   - generating one-off resource providers & services.  *[gen_stage](https://github.com/elixir-lang/gen_stage), [gen_state_machine](https://github.com/ericentin/gen_state_machine), [prometheus](https://github.com/deadtrickster/prometheus.erl)*.
 
