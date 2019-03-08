@@ -1,6 +1,6 @@
 # MasterProxy
 
-Generate a mix umbrella project that proxies web requests on a single port to multiple apps underneath the umbrella.
+Generate a mix umbrella project that proxies web requests to multiple apps underneath the umbrella.
 
 The aim of this project is to create a code generation schematic for specialized high-performance umbrella clusters.
 
