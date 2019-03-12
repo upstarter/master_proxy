@@ -2,7 +2,6 @@
 
 Generate a mix umbrella node equipped for federation in a [Service Mesh](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc).
 
-
 Create a Pull Request or join the discussion on the [slack channel](https://join.slack.com/t/masterproxy/shared_invite/enQtNTQxNDYxMjM1MTI3LTM1Y2U3OTZkZTI5ZTlhZThiMjJhYTVjYTdiM2QzMTIzZjYyZjY5MDQ0NzU3MWI0OTVjZDc0NjMwNmE4NDcxNGQ). For context see the [acme_bank](https://github.com/wojtekmach/acme_bank) example.
 
 ## Installation
@@ -18,24 +17,21 @@ Create a Pull Request or join the discussion on the [slack channel](https://join
   - depends on [this fork](https://github.com/ericsteen/mix_templates) of pragdave/mix_templates
 
 ## Roadmap
-- [ ] Generic Bootstrap Config for Envoy overlay network
-- [ ] Configurable Docker Containerization
-- [ ] Configurable k8 Deployment Orchestration
-- [ ] Configurable Multi-Cloud Terraform Bootstrap
-- [ ] Configurable application API plane OAuth2 resource and service provider generation
+###### Bootstrap Config
+- [ ] Data Plane Sidecar Proxy
+- [ ] Docker Containerization
+- [ ] k8 Deployment Orchestration
+- [ ] Control Plane Istio Integration
+- [ ] App Plane OAuth2 resource and service provider generation
 
-## Goals
+## Aim High
 
-#### Current
-
-Formulate, Specify, Refine generation schematics leveraging third party integrations for evolvable application layer proxies/gateways, general AI architectures, enterprise patterns, crypto network governance protocols.
-
-#### Future
+Refine generation schematics  for [evolvable](https://www.thoughtworks.com/insights/blog/microservices-evolutionary-architecture) service architectures.
 
 ###### Application Plane
-- Thematic service generation, design patterns, IOT.
+- Thematic service generation, design patterns, IOT. Novel proxies/gateways, AI systems, enterprise patterns, crypto network governance protocols.
 
-- Leveraging integration with various service mesh & elixir and OTP capabilities, including:
+- Integration of various service mesh & elixir and OTP capabilities, including:
 
   - Elixir Patterns:  *[gen_stage](https://github.com/elixir-lang/gen_stage), [gen_state_machine](https://github.com/ericentin/gen_state_machine), custom resource definitions*
 
@@ -44,7 +40,7 @@ Formulate, Specify, Refine generation schematics leveraging third party integrat
  *[prometheus](https://github.com/deadtrickster/prometheus.erl)*.
 
 ###### Data Plane
-  - Elixir Clustering: *[horde](https://github.com/derekkraan/horde) / [swarm](https://github.com/bitwalker/swarm) / [libcluster](https://github.com/bitwalker/libcluster), [kazan](https://github.com/obmarg/kazan), [bonny](https://github.com/coryodaniel/bonny)*.
+  - Envoy + Elixir Clustering? A marriage made in heaven?: *[horde](https://github.com/derekkraan/horde) / [swarm](https://github.com/bitwalker/swarm) / [libcluster](https://github.com/bitwalker/libcluster), [kazan](https://github.com/obmarg/kazan), [bonny](https://github.com/coryodaniel/bonny)*.
 
 
 ### Resources & Inspiration
@@ -64,11 +60,11 @@ Formulate, Specify, Refine generation schematics leveraging third party integrat
 
 ## Features
 
-##### Service Mesh Data Plane Bootstrapping
+##### Data Plane Bootstrapping
 
 ##### Control Plane Bootstrapping
 
-##### Application (API) Plane Custom Resource Generation Toolkit
+##### Application Plane Custom Resource Generation Toolkit
 
 ##### Crypto Network Protocol & Governance Bootstrapping
 
