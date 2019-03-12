@@ -55,7 +55,7 @@ defmodule MasterProxy.BootStrap.ConfigAgent do
   # end
   #
   # def load_yaml_config() do
-  {:ok, map} = YamlElixir.read_from_file(path)
+  #  {:ok, map} = YamlElixir.read_from_file(path)
   #   entries = yaml.load(load_file_data())
   #   if entries
   #     update(entries)
