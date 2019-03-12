@@ -1,6 +1,6 @@
 # MasterProxy
 
-Generate a mix umbrella project that proxies web requests to multiple apps underneath the umbrella.
+Generate a mix umbrella serice mesh [Control Plane](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc).
 
 The aim of this project is to create a code generation schematic for specialized high-performance umbrella clusters.
 
