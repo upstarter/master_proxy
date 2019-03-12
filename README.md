@@ -2,7 +2,6 @@
 
 Generate a mix umbrella node equipped for federation in a [Service Mesh](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc).
 
-
 Create a Pull Request or join the discussion on the [slack channel](https://join.slack.com/t/masterproxy/shared_invite/enQtNTQxNDYxMjM1MTI3LTM1Y2U3OTZkZTI5ZTlhZThiMjJhYTVjYTdiM2QzMTIzZjYyZjY5MDQ0NzU3MWI0OTVjZDc0NjMwNmE4NDcxNGQ). For context see the [acme_bank](https://github.com/wojtekmach/acme_bank) example.
 
 ## Installation
@@ -18,11 +17,11 @@ Create a Pull Request or join the discussion on the [slack channel](https://join
   - depends on [this fork](https://github.com/ericsteen/mix_templates) of pragdave/mix_templates
 
 ## Roadmap
-- [ ] Generic Bootstrap Config for Envoy overlay network
-- [ ] Configurable Docker Containerization
-- [ ] Configurable k8 Deployment Orchestration
-- [ ] Configurable Multi-Cloud Terraform Bootstrap
-- [ ] Configurable application API plane OAuth2 resource and service provider generation
+###### Bootstrap Config
+- [ ] Data Plane Sidecar Proxy
+- [ ] Docker Containerization
+- [ ] k8 Deployment Orchestration
+- [ ] Application API layer OAuth2 resource and service provider generation
 
 ## Goals
 
