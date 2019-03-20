@@ -32,7 +32,7 @@ Refine generation schematics  for [evolvable](https://www.thoughtworks.com/insig
   - Elixir Patterns:  *[gen_stage](https://github.com/elixir-lang/gen_stage), [gen_state_machine](https://github.com/ericentin/gen_state_machine), custom resource definitions*
 
 ###### Control Plane
-  - Governance, Security, Observability, Reliability, Traffic Management, Customization: *[istio](https://istio.io/), [glasnotic](https://glasnostic.com/), serverless*
+  - Governability, Security, Observability, Extendibility: *[istio](https://istio.io/), [glasnotic](https://glasnostic.com/), serverless*
  *[prometheus](https://github.com/deadtrickster/prometheus.erl)*.
 
 ###### Data Plane
