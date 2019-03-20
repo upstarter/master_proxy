@@ -18,10 +18,6 @@ Create a Pull Request or join the discussion on the [slack channel](https://join
 
 ## Roadmap
 ###### Bootstrap Config
-- [ ] Data Plane Sidecar Proxy
-- [ ] Docker Containerization
-- [ ] k8 Deployment Orchestration
-- [ ] Control Plane Istio Integration
 - [ ] App Plane OAuth2 resource and service provider generation
 
 ## Aim High
@@ -40,7 +36,7 @@ Refine generation schematics  for [evolvable](https://www.thoughtworks.com/insig
  *[prometheus](https://github.com/deadtrickster/prometheus.erl)*.
 
 ###### Data Plane
-  - Envoy + Elixir Clustering? A marriage made in heaven?: *[horde](https://github.com/derekkraan/horde) / [swarm](https://github.com/bitwalker/swarm) / [libcluster](https://github.com/bitwalker/libcluster), [kazan](https://github.com/obmarg/kazan), [bonny](https://github.com/coryodaniel/bonny)*.
+  - Elixir Clustering: *[horde](https://github.com/derekkraan/horde) / [swarm](https://github.com/bitwalker/swarm) / [libcluster](https://github.com/bitwalker/libcluster), [kazan](https://github.com/obmarg/kazan), [bonny](https://github.com/coryodaniel/bonny)*.
 
 
 ### Resources & Inspiration
