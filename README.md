@@ -18,25 +18,32 @@ Create a Pull Request or join the discussion on the [slack channel](https://join
 
 ## Roadmap
 ###### Bootstrap Config
+- [ ] [Dependency Graph](https://www.terraform.io/docs/internals/graph.html)
+- [ ] Digital Ocean & GKE terraform configs (FinDev)
 - [ ] App Plane OAuth2 resource and service provider generation
 
 ## Aim High
 
-Refine generation schematics  for [evolvable](https://www.thoughtworks.com/insights/blog/microservices-evolutionary-architecture) service architectures.
+Refine generation schematics  for evolvable service mesh architectures with MultiCloud [GitOps](https://www.weave.works/technologies/gitops/) as [first class citizen](https://m.signalvnoise.com/basecamp-outage-when-it-rains-it-pours/) for resiliency and [efficiency](https://www.amazon.com/Accelerate-Software-Performing-Technology-Organizations/dp/1942788339).
 
-###### Application Plane
-- Thematic service generation, design patterns, IOT. Novel proxies/gateways, AI systems, enterprise patterns, crypto network governance protocols.
+> An evolutionary architecture supports guided, incremental change across multiple dimensions – *Ford, Neal, Parsons, Rebecca, Kua, Patrick. [Building Evolutionary Architectures: Support Constant Change](https://www.thoughtworks.com/insights/blog/microservices-evolutionary-architecture). O'Reilly Media.*
 
-- Integration of various service mesh & elixir and OTP capabilities, including:
+###### MasterProxy key dimensions:
+  1. Flexibility (support many activities)
+  2. Security
+  3. Observability
+  4. Extendibility (support third-party strategies)
 
-  - Elixir Patterns:  *[gen_stage](https://github.com/elixir-lang/gen_stage), [gen_state_machine](https://github.com/ericentin/gen_state_machine), custom resource definitions*
+##### Application Plane
+- Thematic service generation, design patterns. Novel proxies/gateways, AI systems, enterprise patterns, crypto network governance protocols, IOT.
 
-###### Control Plane
-  - Governability, Security, Observability, Extendibility: *[istio](https://istio.io/), [glasnotic](https://glasnostic.com/), serverless*
- *[prometheus](https://github.com/deadtrickster/prometheus.erl)*.
+- Integrate key elixir and OTP capabilities, including *[gen_stage](https://github.com/elixir-lang/gen_stage), [gen_state_machine](https://github.com/ericentin/gen_state_machine), CRD (Custom Resource Definitions)*
 
-###### Data Plane
-  - Elixir Clustering: *[horde](https://github.com/derekkraan/horde) / [swarm](https://github.com/bitwalker/swarm) / [libcluster](https://github.com/bitwalker/libcluster), [kazan](https://github.com/obmarg/kazan), [bonny](https://github.com/coryodaniel/bonny)*.
+##### Control Plane
+  - Security, Observability: *[istio](https://istio.io/)*, [zipkin](https://zipkin.io/), *[prometheus](https://github.com/deadtrickster/prometheus.erl)*.
+
+##### Data Plane
+  - Envoy + Elixir Clustering: *[horde](https://github.com/derekkraan/horde) / [swarm](https://github.com/bitwalker/swarm) / [libcluster](https://github.com/bitwalker/libcluster), [kazan](https://github.com/obmarg/kazan), [bonny](https://github.com/coryodaniel/bonny)*.
 
 
 ### Resources & Inspiration
@@ -45,22 +52,23 @@ Refine generation schematics  for [evolvable](https://www.thoughtworks.com/insig
 - [Understanding Microservices & Service Mesh](https://medium.com/microservices-learning/understanding-microservices-communication-and-service-mesh-e888d1adc41)
 - [What is a Service Mesh?](https://glasnostic.com/blog/what-is-a-service-mesh-istio-linkerd-envoy-consul)
 
+
 #### CodeGen
-- [Dave Thomas mix_templates video](https://pragdave.me/blog/2017/04/18/elixir-project-generator.html)
+- Dave Thomas' [mix_templates](https://pragdave.me/blog/2017/04/18/elixir-project-generator.html)
 
 #### Crypto Network Governance
-- [x-Ilities & Governance Efficiency](https://medium.com/@andrew_young/crypto-network-fundamentals-dfa11f15d026)
+- [x-ilities & Governance Efficiency](https://medium.com/@andrew_young/crypto-network-fundamentals-dfa11f15d026)
 
 #### IOT & Fog Computing
 - [geonnave/gen_mcast](https://github.com/geonnave/gen_mcast)
 
 ## Features
 
+##### Application Plane Custom Resource Generation Toolkit
+
 ##### Data Plane Bootstrapping
 
 ##### Control Plane Bootstrapping
-
-##### Application Plane Custom Resource Generation Toolkit
 
 ##### Crypto Network Protocol & Governance Bootstrapping
 

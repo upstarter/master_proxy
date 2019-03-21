@@ -3,7 +3,7 @@ defmodule MasterProxy do
 
   use MixTemplates,
     name: :master_proxy,
-    short_desc: "Template for an Umbrella MasterProxy",
+    short_desc: "Template for an Umbrella MasterProxy Service Mesh Node",
     source_dir: "../template",
     based_on: :umbrella
 

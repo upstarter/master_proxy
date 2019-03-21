@@ -1,3 +1,4 @@
+# build struct for each user config resource/provider
 defmodule MasterProxy.BootStrap.ConfigAgent do
   use Agent
 

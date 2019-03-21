@@ -8,7 +8,8 @@ defmodule MasterProxy.Mixfile do
 
   @deps [
     {:mix_templates, ">0.0.0", app: false, git: "https://github.com/ericsteen/mix_templates"},
-    {:ex_doc, ">0.0.0", only: [:dev, :test]}
+    {:ex_doc, ">0.0.0", only: [:dev, :test]},
+    {:libgraph, "~> 0.13.3"}
   ]
 
   @maintainers ["Eric Steen <ericsteen1@gmail.com>"]
