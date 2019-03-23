@@ -12,9 +12,10 @@ Create a Pull Request or join the discussion on the [slack channel](https://join
 ]
 ```
 
-## Seeking Contributors
+## Contributors Welcome
 
   - depends on [this fork](https://github.com/ericsteen/mix_templates) of pragdave/mix_templates
+  - Graph Experts wanted for custom resource dependency graph
 
 ## Roadmap
 ###### Bootstrap Config
@@ -30,9 +31,9 @@ Refine generation schematics  for evolvable service mesh architectures with Mult
 
 ###### MasterProxy key dimensions:
   1. Flexibility (support many activities)
-  2. Security
+  2. Securability
   3. Observability
-  4. Extendibility (support third-party strategies)
+  4. Extensibility (support third-party strategies)
 
 ##### Application Plane
 - Thematic service generation, design patterns. Novel proxies/gateways, AI systems, enterprise patterns, crypto network governance protocols, IOT.
@@ -40,7 +41,7 @@ Refine generation schematics  for evolvable service mesh architectures with Mult
 - Integrate key elixir and OTP capabilities, including *[gen_stage](https://github.com/elixir-lang/gen_stage), [gen_state_machine](https://github.com/ericentin/gen_state_machine), CRD (Custom Resource Definitions)*
 
 ##### Control Plane
-  - Security, Observability: *[istio](https://istio.io/)*, [zipkin](https://zipkin.io/), *[prometheus](https://github.com/deadtrickster/prometheus.erl)*.
+  - Security, Observability: *[istio](https://istio.io/)*, [jaeger](https://www.jaegertracing.io/), *[prometheus](https://github.com/deadtrickster/prometheus.erl)*.
 
 ##### Data Plane
   - Envoy + Elixir Clustering: *[horde](https://github.com/derekkraan/horde) / [swarm](https://github.com/bitwalker/swarm) / [libcluster](https://github.com/bitwalker/libcluster), [kazan](https://github.com/obmarg/kazan), [bonny](https://github.com/coryodaniel/bonny)*.
