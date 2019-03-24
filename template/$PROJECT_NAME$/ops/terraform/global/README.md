@@ -1,1 +1,0 @@
-persistent storage, RDS etc.

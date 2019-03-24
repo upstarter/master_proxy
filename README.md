@@ -29,7 +29,7 @@ Refine generation schematics  for evolvable service mesh architectures with Mult
 
 > An evolutionary architecture supports guided, incremental change across multiple dimensions – *Ford, Neal, Parsons, Rebecca, Kua, Patrick. [Building Evolutionary Architectures: Support Constant Change](https://www.thoughtworks.com/insights/blog/microservices-evolutionary-architecture). O'Reilly Media.*
 
-###### MasterProxy key dimensions:
+###### MasterProxy Key Dimensions:
   1. Flexibility (support many activities)
   2. Securability
   3. Observability
