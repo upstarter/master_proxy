@@ -1,6 +1,6 @@
 # MasterProxy
 
-Generate a mix umbrella node equipped for federation in a [Service Mesh](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc).
+Generate a mix umbrella node equipped for federation in a [Service Mesh](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc). _Almost like your favorite band's epic studio album master tape, but cooler._
 
 Create a Pull Request or join the discussion on the [slack channel](https://join.slack.com/t/masterproxy/shared_invite/enQtNTQxNDYxMjM1MTI3LTM1Y2U3OTZkZTI5ZTlhZThiMjJhYTVjYTdiM2QzMTIzZjYyZjY5MDQ0NzU3MWI0OTVjZDc0NjMwNmE4NDcxNGQ). For context see the [acme_bank](https://github.com/wojtekmach/acme_bank) example.
 
@@ -15,7 +15,7 @@ Create a Pull Request or join the discussion on the [slack channel](https://join
 ## Contributors Welcome
 
   - depends on [this fork](https://github.com/ericsteen/mix_templates) of pragdave/mix_templates
-  - Graph Experts wanted for custom resource dependency graph
+
 
 ## Roadmap
 ###### Bootstrap Config
@@ -35,16 +35,23 @@ Refine generation schematics  for evolvable service mesh architectures with Mult
   3. Observability
   4. Extensibility (support third-party strategies)
 
-##### Application Plane
-- Thematic service generation, design patterns. Novel proxies/gateways, AI systems, enterprise patterns, crypto network governance protocols, IOT.
+#### Application Plane
+- Thematic service generation, design patterns.
+  - Novel proxies/gateways
+  - AI systems
+  - Enterprise patterns
+  - Crypto network governance protocols
+  - IOT
+- Key elixir and OTP capabilities
+  - [gen_stage](https://github.com/elixir-lang/gen_stage)
+  - [gen_state_machine](https://github.com/ericentin/gen_state_machine)
+- **CRD**'s (Custom Resource Definitions)
 
-- Integrate key elixir and OTP capabilities, including *[gen_stage](https://github.com/elixir-lang/gen_stage), [gen_state_machine](https://github.com/ericentin/gen_state_machine), CRD (Custom Resource Definitions)*
+#### Control Plane
+  - Security, Observability: [istio](https://istio.io/), [jaeger](https://www.jaegertracing.io/), [prometheus](https://github.com/deadtrickster/prometheus.erl).
 
-##### Control Plane
-  - Security, Observability: *[istio](https://istio.io/)*, [jaeger](https://www.jaegertracing.io/), *[prometheus](https://github.com/deadtrickster/prometheus.erl)*.
-
-##### Data Plane
-  - Envoy + Elixir Clustering: *[horde](https://github.com/derekkraan/horde) / [swarm](https://github.com/bitwalker/swarm) / [libcluster](https://github.com/bitwalker/libcluster), [kazan](https://github.com/obmarg/kazan), [bonny](https://github.com/coryodaniel/bonny)*.
+#### Data Plane
+  - Envoy + Elixir Clustering: [horde](https://github.com/derekkraan/horde) / [swarm](https://github.com/bitwalker/swarm) / [libcluster](https://github.com/bitwalker/libcluster), [kazan](https://github.com/obmarg/kazan), [bonny](https://github.com/coryodaniel/bonny).
 
 
 ### Resources & Inspiration
