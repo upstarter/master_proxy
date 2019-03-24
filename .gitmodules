@@ -1,0 +1,3 @@
+[submodule "template/$PROJECT_NAME$/ops"]
+	path = template/$PROJECT_NAME$/ops
+	url = https://github.com/ericsteen/master_ops
