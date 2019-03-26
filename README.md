@@ -1,6 +1,6 @@
 # MasterProxy
 
-Generate a mix umbrella node equipped for federation in a [Service Mesh](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc). _Almost like your favorite band's epic studio album master tape, but cooler._
+Generate a mix umbrella node equipped for federation in a [Service Mesh](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc).
 
 Create a Pull Request or join the discussion on the [slack channel](https://join.slack.com/t/masterproxy/shared_invite/enQtNTQxNDYxMjM1MTI3LTM1Y2U3OTZkZTI5ZTlhZThiMjJhYTVjYTdiM2QzMTIzZjYyZjY5MDQ0NzU3MWI0OTVjZDc0NjMwNmE4NDcxNGQ). For context see the [acme_bank](https://github.com/wojtekmach/acme_bank) example.
 
@@ -25,7 +25,7 @@ Create a Pull Request or join the discussion on the [slack channel](https://join
 
 ## Aim High
 
-Refine generation schematics  for evolvable service mesh architectures with MultiCloud [GitOps](https://www.weave.works/technologies/gitops/) as [first class citizen](https://m.signalvnoise.com/basecamp-outage-when-it-rains-it-pours/) for resiliency and [efficiency](https://www.amazon.com/Accelerate-Software-Performing-Technology-Organizations/dp/1942788339).
+Refine generation schematics for evolvable service mesh architectures with MultiCloud [GitOps](https://www.weave.works/technologies/gitops/) as [first class citizen](https://m.signalvnoise.com/basecamp-outage-when-it-rains-it-pours/) for resiliency and [effectiveness](https://www.amazon.com/Accelerate-Software-Performing-Technology-Organizations/dp/1942788339).
 
 > An evolutionary architecture supports guided, incremental change across multiple dimensions – *Ford, Neal, Parsons, Rebecca, Kua, Patrick. [Building Evolutionary Architectures: Support Constant Change](https://www.thoughtworks.com/insights/blog/microservices-evolutionary-architecture). O'Reilly Media.*
 
@@ -65,6 +65,7 @@ Refine generation schematics  for evolvable service mesh architectures with Mult
 - Dave Thomas' [mix_templates](https://pragdave.me/blog/2017/04/18/elixir-project-generator.html)
 
 #### Crypto Network Governance
+- [Governance](https://medium.com/blockchannel/the-crypto-governance-manifesto-2326e72dc3d0)
 - [x-ilities & Governance Efficiency](https://medium.com/@andrew_young/crypto-network-fundamentals-dfa11f15d026)
 
 #### IOT & Fog Computing
